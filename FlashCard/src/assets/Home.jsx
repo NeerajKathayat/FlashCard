@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const getData = async () => {
-      let result = await fetch("http://localhost:4000/api/flashcards", {
+      let result = await fetch("https://flashcardbackend-1-jab6.onrender.com/api/flashcards", {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
