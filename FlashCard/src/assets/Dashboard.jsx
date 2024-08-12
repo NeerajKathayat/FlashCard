@@ -11,7 +11,7 @@ const Dashboard = () => {
      
     useEffect(() => {
         const getData = async () => {
-            let result = await fetch("http://localhost:4000/api/flashcards", {
+            let result = await fetch("https://flashcardbackend-1-jab6.onrender.com/api/flashcards", {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const Dashboard = () => {
 
     const addFlashcard = async () => {
         try {
-            const response = await fetch('http://localhost:4000/api/flashcards', {
+            const response = await fetch('https://flashcardbackend-1-jab6.onrender.com/api/flashcards', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const Dashboard = () => {
 
     const deleteFlashcard = async (id) => {
         try {
-            await fetch(`http://localhost:4000/api/flashcards/${id}`, {
+            await fetch(`https://flashcardbackend-1-jab6.onrender.com/api/flashcards/${id}`, {
                 method: 'DELETE',
             });
 
@@ -79,7 +79,7 @@ const Dashboard = () => {
 
  const UpdateFlashcard=async ()=>{
     try {
-        const response = await fetch(`http://localhost:4000/api/flashcards/${noteID}`, {
+        const response = await fetch(`https://flashcardbackend-1-jab6.onrender.com/api/flashcards/${noteID}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const Dashboard = () => {
 
 
  const  fetchData = async () => {
-    let result = await fetch("http://localhost:4000/api/flashcards", {
+    let result = await fetch("https://flashcardbackend-1-jab6.onrender.com/api/flashcards", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
