@@ -103,6 +103,7 @@ const Dashboard = () => {
 
         setQues('')
         setAns('')
+        setNoteID('')
         setModal(false)
 
 
@@ -131,6 +132,15 @@ const Dashboard = () => {
     else {
         console.log("error")
     }
+}
+
+
+  
+const close = () =>{
+        setQues('')
+        setAns('')
+        setNoteID('')
+        setModal(false)
 }
 
 
@@ -173,7 +183,7 @@ const Dashboard = () => {
 
            {
               modal && (
-                <div className='overlay' onClick={()=>setModal(false)}>
+                <div className='overlay' onClick={close}>
                 <div className='bg-white flex flex-col gap-7 p-6 w-[400px]' onClick={(e)=> e.stopPropagation()}>
                       <h1 className='text-2xl font-bold'>Enter Question and Answer</h1>
                       <textarea type="text" className='h-[150px] p-2' value={ques} onChange={(e)=>{setQues(e.target.value)}} placeholder='Enter Question'/>
