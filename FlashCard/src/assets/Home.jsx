@@ -29,6 +29,10 @@ const Home = () => {
   }, [])
 
   const handlePrevious = () => {
+    
+ if(flipped){
+      setFlipped(false)
+ }
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? flashCards.length - 1 : prevIndex - 1
     );
